@@ -11,10 +11,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/person', ( req, res ) => {
-   const {data} = req.body;
-   const result = data.age+5;
-   console.log(result);
-   res.status(201).json(result);     
+   const data = req.body;
+      data.age=parseInt( data.age)+ 5;
+   console.log(data);
+   res.status(201).send(data);     
 });
 function start (port) {
     app.listen(port, () => {
