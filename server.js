@@ -11,13 +11,19 @@ app.get('/', (req, res) => {
 
 app.post('/person', ( req, res ) => {
    const {data} = req.body;
-   console.log(data.age);
    const result = data.age+5;
+   console.log(result);
    res.status(201).json(result);
+// const data = {
+//     name:"fahad",
+//     age:22,
+//     gender:"male"
+// }
+// const result = (data.age)+5;
 
+// res.send(JSON.stringify( result));
       
 });
-
 function start (port) {
     app.listen(port, () => {
         console.log(`Server is listening on PORT : ${port}`);
