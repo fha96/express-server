@@ -13,16 +13,7 @@ app.post('/person', ( req, res ) => {
    const {data} = req.body;
    const result = data.age+5;
    console.log(result);
-   res.status(201).json(result);
-// const data = {
-//     name:"fahad",
-//     age:22,
-//     gender:"male"
-// }
-// const result = (data.age)+5;
-
-// res.send(JSON.stringify( result));
-      
+   res.status(201).json(result);     
 });
 function start (port) {
     app.listen(port, () => {
